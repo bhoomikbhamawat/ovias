@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "958640879573",
+    "firebase_url": "https://login-5fbda.firebaseio.com",
+    "project_id": "login-5fbda",
+    "storage_bucket": "login-5fbda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958640879573:android:4c578e997c8efe88",
+        "android_client_info": {
+          "package_name": "com.example.akash.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958640879573-h47v9v1ep5oe3in1ijvlf63uaf8m4sov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmvhaDE8hJD0kPDMqGzDfscDJ5VpNDs_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
