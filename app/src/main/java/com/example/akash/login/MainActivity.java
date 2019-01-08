@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void  valid(String userName, String pswd){
         if((userName.equals ("akash")) && (pswd.equals ("123"))){
-            Intent intent = new Intent(MainActivity.this,secactivity.class);
+            Intent intent = new Intent(MainActivity.this,Calender.class);
             Log.e("intent" ,"passed");
             startActivity(intent);
         }

@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".secactivity" />
-        <activity android:name=".reg"></activity>
+        <activity android:name=".reg" />
+        <activity android:name=".Calender"></activity>
     </application>
 
 </manifest>
