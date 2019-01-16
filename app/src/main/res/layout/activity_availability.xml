@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/availabity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Availability">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="214dp"
+        android:layout_height="126dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="117dp"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <EditText
+        android:id="@+id/av2"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="90dp"
+        android:ems="10"
+        android:hint="Y/N"
+        android:inputType="textCapCharacters|textMultiLine|textPersonName" />
+
+    <EditText
+        android:id="@+id/av1"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="104dp"
+        android:ems="10"
+        android:hint="Y/N"
+        android:inputType="textCapCharacters|textMultiLine|textPersonName" />
+
+    <Button
+        android:id="@+id/abtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/av1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="170dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="149dp"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/abtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/av1"
+        android:layout_alignParentEnd="true"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/abtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/av1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-130dp"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="242dp"
+        android:layout_height="109dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="148dp"
+        app:srcCompat="@drawable/avg" />
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="53dp"
+        android:text="TextView" />
+
+</RelativeLayout>

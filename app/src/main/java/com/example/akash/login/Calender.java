@@ -46,7 +46,7 @@ public class Calender extends AppCompatActivity {
 
         });
         fbase =FirebaseAuth.getInstance();
-        lout=(Button)findViewById(R.id.out);
+        lout=(Button)findViewById(R.id.proceed);
 
         lout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,17 +67,28 @@ public class Calender extends AppCompatActivity {
         startActivity(intent);
 
     }
+    private void adminin(){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.logoutmenu:{
+
+        Intent intent =new Intent(Calender.this,Availability.class);
+        startActivity(intent);}
+
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.logoutmenu: {
                 logout();
             }
+        }switch(item.getItemId()){
 
-        }
-        return super.onOptionsItemSelected(item);
-    }
+                case R.id.admin:{
+                    adminin();}
+
+
+
+
+    }return super.onOptionsItemSelected(item);}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
