@@ -27,7 +27,9 @@
         <activity android:name=".reg" />
         <activity android:name=".Calender" />
         <activity android:name=".adminlogin" />
-        <activity android:name=".Availability"></activity>
+        <activity android:name=".Availability" />
+        <activity android:name=".user_availability" />
+        <activity android:name=".Fpasswd"></activity>
     </application>
 
 </manifest>

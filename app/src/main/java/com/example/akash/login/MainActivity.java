@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView ureg;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog pdilog;
+    private TextView Fpswd;
 
 
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         ureg=(TextView) findViewById(R.id.t1);
         firebaseAuth=FirebaseAuth.getInstance();
         pdilog=new ProgressDialog(this);
+        Fpswd =(TextView)findViewById(R.id.fpswd);
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
@@ -59,12 +61,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Fpswd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity .this, Fpasswd.class));
+            }
+        });
         ureg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity .this, reg.class));
             }
         });
+
 
 
     }

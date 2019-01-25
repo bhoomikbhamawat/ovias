@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class reg extends AppCompatActivity {
     private EditText uname,upswd,umail;
@@ -42,6 +43,7 @@ public class reg extends AppCompatActivity {
                        @Override
                        public void onComplete(@NonNull Task<AuthResult> task) {
                            if (task.isSuccessful()) {
+                               Verifymail();
 
                                Toast. makeText(reg.this, "registeration done", Toast.LENGTH_SHORT).show();
                            } else {
@@ -50,6 +52,21 @@ public class reg extends AppCompatActivity {
                        }
                    });
                }
+            }
+
+            private void Verifymail() {
+                FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null){
+                    user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Toast.makeText(reg.this,"Check Your Mail for verification", Toast.LENGTH_SHORT).show();
+                                FirebaseAuth.getInstance().signOut();
+                            }
+                        }
+                    });
+                }
             }
         });
         ulogin.setOnClickListener(new View.OnClickListener() {
