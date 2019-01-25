@@ -17,7 +17,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Calender extends AppCompatActivity {
     private TextView d1;
     private CalendarView mCalendar;
-    private Button lout;
+    private Button procced;
+    int mon1;
     String date;
     private FirebaseAuth fbase;
 
@@ -35,7 +36,8 @@ public class Calender extends AppCompatActivity {
         mCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int y, int mon, int day) {
-               date= day +"/"+ mon+1 +"/"+ y;
+                mon1=mon +1;
+               date= day +"/"+mon1 +"/"+ y;
                 Log.d( "onSelectedDayChange" ,date);
                 d1.setText(date);
 
@@ -46,14 +48,13 @@ public class Calender extends AppCompatActivity {
 
         });
         fbase =FirebaseAuth.getInstance();
-        lout=(Button)findViewById(R.id.proceed);
+        procced=(Button)findViewById(R.id.proceed);
 
-        lout.setOnClickListener(new View.OnClickListener() {
+        procced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fbase.signOut();
-                finish();
-                Intent intent =new Intent(Calender.this,MainActivity.class);
+
+                Intent intent =new Intent(Calender.this,user_availability.class);
                 startActivity(intent);
             }
         });
